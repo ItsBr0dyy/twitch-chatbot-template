@@ -7,10 +7,10 @@ import asyncio
 import random
 
 # Set up contestants
-APP_ID = "8zkejzxaxy727hq99ffytj6zw3ps61"
-APP_SECRET = "iv7ktc5wy2hs1zgw8yhgt4z3fngonk"
+APP_ID = "CLIENT_ID"
+APP_SECRET = "CLIENT_SECRET"
 USER_SCOPE = [AuthScope.CHAT_READ, AuthScope.CHAT_EDIT, AuthScope.CHANNEL_MANAGE_BROADCAST]
-TARGET_CHANNEL = '6pljay'
+TARGET_CHANNEL = 'TARGET_CHANNEL'
 
 async def on_message(msg: ChatMessage):
     # Print username and chat message
@@ -94,19 +94,19 @@ async def dihsize_command(cmd: ChatCommand):
     chance = random.randint(0, 6)
 
     if chance == 0:
-        await cmd.reply("/me kaydance's dih size is 67")
+        await cmd.reply("/me dih size is 67")
     elif chance == 1:
-        await cmd.reply("/me kaydance's dih size is too small")
+        await cmd.reply("/me dih size is too small")
     elif chance == 2:
-        await cmd.reply("/me kaydance's dih size is 2 inches (it is average tho)")
+        await cmd.reply("/me dih size is 2 inches (it is average tho)")
     elif chance == 3:
-        await cmd.reply("/me kaydance's dih size is 99999999")
+        await cmd.reply("/me dih size is 99999999")
     elif chance == 4:
-        await cmd.reply("/me kaydance's dih size is- WTFFFF")
+        await cmd.reply("/me dih size is- WTFFFF")
     elif chance == 5:
-        await cmd.reply("/me kaydance's dih size is too massive")
+        await cmd.reply("/me dih size is too massive")
     elif chance == 6:
-        await cmd.reply("/me kaydance's dih size is 10 centimeters")
+        await cmd.reply("/me dih size is 10 centimeters")
 
 # hi command
 async def hi_command(cmd: ChatCommand):
@@ -136,7 +136,7 @@ async def fact_command(cmd: ChatCommand):
     elif chance == 2:
         await cmd.reply("/me Did you know that honey never spoils.")
     elif chance == 3:
-        await cmd.reply("/me Did you know that ctopuses have three hearts.")
+        await cmd.reply("/me Did you know that octopuses have three hearts.")
     elif chance == 4:
         await cmd.reply("/me Did you know that koalas have fingerprints that are almost identical to humans.")
     elif chance == 5:
@@ -146,11 +146,11 @@ async def fact_command(cmd: ChatCommand):
 
 # online command
 async def online_command(cmd: ChatCommand):
-        await cmd.reply('/me KKABot is online and functioning!')
+        await cmd.reply('/me Bot is online and functioning!')
 
 # updating command
 async def updating_command(cmd: ChatCommand):
-        await cmd.reply('/me KKABot is getting updated and will be back up in a few minutes!')
+        await cmd.reply('/me Bot is getting updated and will be back up in a few minutes!')
 
 # donation command
 async def donation_command(cmd: ChatCommand):
@@ -263,5 +263,6 @@ async def run_bot():
     finally:
         chat.stop()
         await bot.close()
+
 
 asyncio.run(run_bot())
